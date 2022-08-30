@@ -19,106 +19,148 @@ class LvlColor {
 		$result = "";
 		$level = self::getLevel($player);
 		if($level >= 0){
-			$result = TextFormat::GRAY.$level;
+			$result = TextFormat::WHITE.$level;
 	        }
 	        if($level >= 5){
-			$result = TextFormat::DARK_GRAY.$level;
+			$result = TextFormat::GRAY.$level;
 		}
 		if($level >= 10){
-			$result = TextFormat::YELLOW.$level;	
+			$result = TextFormat::DARK_GRAY.$level;	
 		}
 		if($level >= 15){
-			$result = TextFormat::GOLD.$level;
+			$result = TextFormat::YELLOW.$level;
 		}
 		if($level >= 20){
-			$result = TextFormat::AQUA.$level;
+			$result = TextFormat::GOLD.$level;
 		}
 		if($level >= 30){
-			$result = TextFormat::LIGHT_PURPLE.$level;
+			$result = TextFormat::AQUA.$level;
 		}
 		if($level >= 40){
-			$result = TextFormat::DARK_PURPLE.$level;
+			$result = TextFormat::LIGHT_PURPLE.$level;
 		}
                 if($level >= 50){
-                        $result = TextFormat::GREEN.$level;
+                        $result = TextFormat::DARK_PURPLE.$level;
 		}
-		if($level >= 65){
+		if($level >= 60){
+			$result = TextFormat::GREEN.$level;
+		}
+		if($level >= 70){
 			$result = TextFormat::DARK_GREEN.$level;
 		}
 		if($level >= 80){
-			$result = TextFormat::RED.$level;
+			$result = TextFormat::RED.$level;	
+		}
+		if($level >= 90){
+			$result = TextFormat::BLUE.$level;
 		}
 		if($level >= 100){
-			$result = TextFormat::BLUE.$level;	
-		}
-		if($level >= 125){
 			$result = TextFormat::DARK_BLUE.$level;
 		}
-		if($level >= 150){
+		if($level >= 120){
 			$result = TextFormat::DARK_RED.$level;
 		}
-		if($level >= 175){
+		if($level >= 140){
 			$result = TextFormat::DARK_AQUA.$level;
 		}
-		if($level >= 200){
-			$result = TextFormat::BLACK.$level;
+                if($level >= 160){
+                        $result = TextFormat::BLACK.$level;
 		}
-                if($level >= 225){
-                        $result = TextFormat::WHITE.$level;
-		}
-		if($level >= 250){
-			$result = TextFormat::GOLD_MINECOIN.$level;
-		}
-		if($level >= 275){
-			$result = TextFormat::BOLD . TextFormat::GRAY.$level;
+		if($level >= 180){
+			$result = TextFormat::BOLD . TextFormat::WHITE.$level;
 	        }
-	        if($level >= 300){
-			$result = TextFormat::BOLD . TextFormat::DARK_GRAY.$level;
+	        if($level >= 200){
+			$result = TextFormat::BOLD . TextFormat::GRAY.$level;
 		}
-		if($level >= 350){
-			$result = TextFormat::BOLD . TextFormat::YELLOW.$level;	
+		if($level >= 220){
+			$result = TextFormat::BOLD . TextFormat::DARK_GRAY.$level;	
 		}
-		if($level >= 400){
+		if($level >= 240){
+			$result = TextFormat::BOLD . TextFormat::YELLOW.$level;
+		}
+		if($level >= 260){
 			$result = TextFormat::BOLD . TextFormat::GOLD.$level;
 		}
-		if($level >= 450){
+		if($level >= 280){
 			$result = TextFormat::BOLD . TextFormat::AQUA.$level;
 		}
-		if($level >= 500){
+		if($level >= 300){
 			$result = TextFormat::BOLD . TextFormat::LIGHT_PURPLE.$level;
 		}
-		if($level >= 575){
-			$result = TextFormat::BOLD . TextFormat::DARK_PURPLE.$level;
+                if($level >= 325){
+                        $result = TextFormat::BOLD . TextFormat::DARK_PURPLE.$level;
 		}
-                if($level >= 650){
-                        $result = TextFormat::BOLD . TextFormat::GREEN.$level;
+		if($level >= 350){
+			$result = TextFormat::BOLD . TextFormat::GREEN.$level;
 		}
-		if($level >= 725){
+		if($level >= 400){
 			$result = TextFormat::BOLD . TextFormat::DARK_GREEN.$level;
 		}
-		if($level >= 800){
-			$result = TextFormat::BOLD . TextFormat::RED.$level;
+		if($level >= 450){
+			$result = TextFormat::BOLD . TextFormat::RED.$level;	
 		}
-		if($level >= 900){
-			$result = TextFormat::BOLD . TextFormat::BLUE.$level;	
+		if($level >= 500){
+			$result = TextFormat::BOLD . TextFormat::BLUE.$level;
 		}
-		if($level >= 1000){
+		if($level >= 550){
 			$result = TextFormat::BOLD . TextFormat::DARK_BLUE.$level;
 		}
-		if($level >= 1200){
+		if($level >= 600){
 			$result = TextFormat::BOLD . TextFormat::DARK_RED.$level;
 		}
-		if($level >= 1400){
+		if($level >= 750){
 			$result = TextFormat::BOLD . TextFormat::DARK_AQUA.$level;
 		}
+                if($level >= 800){
+                        $result = TextFormat::BOLD . TextFormat::BLACK.$level;
+		}
+		if($level >= 850){
+			$result = TextFormat::BOLD . TextFormat::WHITE.$level;
+		}
+		if($level >= 900){
+			$result = TextFormat::ITALIC . TextFormat::GRAY.$level;
+		}
+		if($level >= 950){
+			$result = TextFormat::ITALIC . TextFormat::DARK_GRAY.$level;	
+		}
+		if($level >= 1000){
+			$result = TextFormat::ITALIC . TextFormat::YELLOW.$level;
+		}
+		if($level >= 1050){
+			$result = TextFormat::ITALIC . TextFormat::GOLD.$level;
+		}
+		if($level >= 1125){
+			$result = TextFormat::ITALIC . TextFormat::AQUA.$level;
+		}
+		if($level >= 1200){
+			$result = TextFormat::ITALIC . TextFormat::LIGHT_PURPLE.$level;
+		}
+                if($level >= 1275){
+                        $result = TextFormat::ITALIC . TextFormat::DARK_PURPLE.$level;
+		}
+		if($level >= 1350){
+			$result = TextFormat::ITALIC . TextFormat::GREEN.$level;
+		}
+		if($level >= 1425){
+			$result = TextFormat::ITALIC . TextFormat::DARK_GREEN.$level;
+		}
+		if($level >= 1500){
+			$result = TextFormat::ITALIC . TextFormat::RED.$level;	
+		}
 		if($level >= 1600){
-			$result = TextFormat::BOLD . TextFormat::BLACK.$level;
+			$result = TextFormat::ITALIC . TextFormat::BLUE.$level;
 		}
-                if($level >= 1800){
-                        $result = TextFormat::BOLD . TextFormat::WHITE.$level;
+		if($level >= 1700){
+			$result = TextFormat::ITALIC . TextFormat::DARK_BLUE.$level;
 		}
-		if($level >= 2000){
-			$result = TextFormat::BOLD . TextFormat::GOLD_MINECOIN.$level;
+		if($level >= 1800){
+			$result = TextFormat::ITALIC . TextFormat::DARK_RED.$level;
+		}
+		if($level >= 1900){
+			$result = TextFormat::ITALIC . TextFormat::DARK_AQUA.$level;
+		}
+                if($level >= 2000){
+                        $result = TextFormat::ITALIC . TextFormat::BLACK.$level;
 		}
 		return $result;
 	}
