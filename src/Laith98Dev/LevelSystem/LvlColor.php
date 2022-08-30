@@ -67,7 +67,7 @@ class LvlColor {
                         $result = TextFormat::WHITE.$level;
 		}
 		if($level >= 250){
-			$result = TextFormat::MINECOIN_GOLD.$level;
+			$result = TextFormat::GOLD_MINECOIN.$level;
 		}
 		if($level >= 275){
 			$result = TextFormat::BOLD . TextFormat::GRAY.$level;
@@ -118,7 +118,7 @@ class LvlColor {
                         $result = TextFormat::BOLD . TextFormat::WHITE.$level;
 		}
 		if($level >= 2000){
-			$result = TextFormat::BOLD . TextFormat::MINECOIN_GOLD.$level;
+			$result = TextFormat::BOLD . TextFormat::GOLD_MINECOIN.$level;
 		}
 		return $result;
 	}
