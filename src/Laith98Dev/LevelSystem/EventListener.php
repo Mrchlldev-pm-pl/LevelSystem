@@ -46,6 +46,7 @@ use pocketmine\event\player\PlayerDeathEvent;
 use pocketmine\event\block\BlockPlaceEvent;
 use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\event\entity\{EntityDamageEvent, EntityDamageByEntityEvent};
+use pocketmine\player\chat\LegacyRawChatFormatter;
 
 use _64FF00\PurePerms\EventManager\PPRankChangedEvent;
 
@@ -118,7 +119,7 @@ class EventListener implements Listener
 		if($player instanceof Player){
 			$cfg = new Config($this->plugin->getDataFolder() . "settings.yml", Config::YAML);
 			if($cfg->get("plugin-enable") === true){
-				if($cfg->get("add-xp-by-build") === true && in_array($block->getId(), $cfg->get("blocks-list", []))){
+				if($cfg->get("add-xp-by-build") === true && in_array($block->getTypeId(), $cfg->get("blocks-list", []))){
 					if(mt_rand(0, 200) < 120 && mt_rand(0, 1) == 1 && mt_rand(0, 1) == 0 && mt_rand(0, 3) == 2){// random
 						if($this->plugin->getDataManager()->addXP($player, $this->plugin->getDataManager()->getAddXpCount($player))){
 							$player->sendPopup(TF::YELLOW . "+" . $this->plugin->getDataManager()->getAddXpCount($player) . " XP");
@@ -143,7 +144,7 @@ class EventListener implements Listener
 		if($player instanceof Player){
 			$cfg = new Config($this->plugin->getDataFolder() . "settings.yml", Config::YAML);
 			if($cfg->get("plugin-enable") && $cfg->get("plugin-enable") === true){
-				if($cfg->get("add-xp-by-destroy") && $cfg->get("add-xp-by-destroy") === true && in_array($block->getId(), $cfg->get("blocks-list", []))){
+				if($cfg->get("add-xp-by-destroy") && $cfg->get("add-xp-by-destroy") === true && in_array($block->getTypeId(), $cfg->get("blocks-list", []))){
 					if(mt_rand(0, 200) < 120 && mt_rand(0, 1) == 1 && mt_rand(0, 1) == 0 && mt_rand(0, 3) == 2){// random
 						if($this->plugin->getDataManager()->addXP($player, $this->plugin->getDataManager()->getAddXpCount($player))){
 							$player->sendPopup(TF::YELLOW . "+" . $this->plugin->getDataManager()->getAddXpCount($player) . " XP");
