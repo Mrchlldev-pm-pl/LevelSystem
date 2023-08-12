@@ -1,9 +1,9 @@
 name: LevelSystem
-api: [4.0.0]
+api: 5.0.0
 main: Laith98Dev\LevelSystem\Main
-author: Laith98Dev
+author: Laith98Dev, Convert to pm5 by Mrchlldev
 website: https://github.com/Laith98Dev
-version: 1.0.1
+version: 1.0.5+dev
 description: Advanced LevelSystem for PocketMine-MP
 depend: [PureChat, PurePerms, ScoreHud]
 
