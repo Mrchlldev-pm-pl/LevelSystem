@@ -111,7 +111,7 @@ class EventListener implements Listener
 	public function onPlace(BlockPlaceEvent $event): void
 	{
 		$player = $event->getPlayer();
-		$block = $event->getBlock();
+		$block = $event->getBlockAgainst();
 		if($event->isCancelled())
 			return;
 		
@@ -237,7 +237,7 @@ class EventListener implements Listener
 						$WorldName = $this->getPlugin()->pureChat->getConfig()->get("enable-multiworld-chat") ? $player->getWorld()->getDisplayName() : null;
 						$chatFormat = $this->getPlugin()->pureChat->getChatFormat($player, $message, $WorldName);
 						$chatFormat = str_replace("{lvl}", $lvl, $chatFormat);
-						$event->setFormat($chatFormat); 
+						$event->setFormatter(new LegacyRawChatFormatter($chatFormat)); 
 					} 
 					/* else {
 						if($cfg->get("chatFormat") && $cfg->get("chatFormat") !== ""){
